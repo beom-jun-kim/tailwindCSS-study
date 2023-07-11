@@ -1,4 +1,11 @@
 import Image from "next/image";
+import tw from "tailwind-styled-components";
+
+const Button = tw.button`
+  bg-slate-300 
+  w-8 h-8 
+  rounded-lg
+`;
 
 export default function Home() {
   return (
@@ -19,7 +26,7 @@ export default function Home() {
           <span>Total</span>
           <span>$99</span>
         </div>
-        <div className="bg-blue-400 text-white p-3 text-center rounded-xl w-1/2 mx-auto">
+        <div className="bg-blue-400 text-white p-3 text-center rounded-xl w-1/2 mx-auto hover:bg-blue-600 transition cursor-pointer">
           checkout
         </div>
       </div>
@@ -41,20 +48,22 @@ export default function Home() {
             <div>
               <div className="flex justify-between items-center">
                 <div className="space-x-3">
-                  <input type="radio" className="accent-red-600" />
-                  <input type="radio" className="accent-blue-600" />
-                  <input type="radio" className="accent-orange-600" />
+                  <button className="w-5 h-5 rounded-full bg-yellow-500 focus:ring-2 ring-offset-2 ring-yellow-500 transition" />
+                  <button className="w-5 h-5 rounded-full bg-indigo-500 focus:ring-2 ring-offset-2 ring-indigo-500 transition" />
+                  <button className="w-5 h-5 rounded-full bg-teal-500 focus:ring-2 ring-offset-2 ring-teal-500 transition" />
                 </div>
                 <div className="space-x-3">
-                  <button className="bg-slate-300 w-8 h-8 rounded-lg">-</button>
-                  <span >1</span>
-                  <button className="bg-slate-300 w-8 h-8 rounded-lg">+</button>
+                  <Button>-</Button>
+                  <span>1</span>
+                  <Button>+</Button>
                 </div>
               </div>
             </div>
             <div className="flex justify-between items-center mt-6">
               <span className="text-2xl font-medium">$450</span>
-              <button className="bg-blue-500 text-white px-10 py-3 rounded-lg">Add to cart</button>
+              <button className="bg-blue-500 text-white px-10 py-3 rounded-lg">
+                Add to cart
+              </button>
             </div>
           </div>
         </div>
