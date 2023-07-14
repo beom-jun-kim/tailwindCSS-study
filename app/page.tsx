@@ -1,3 +1,4 @@
+import { link } from "fs";
 import Image from "next/image";
 import tw from "tailwind-styled-components";
 
@@ -13,14 +14,24 @@ export default function Home() {
       <div className="bg-slate-50 p-10 rounded-xl shadow-xl">
         <span className="font-semibold text-lg">Select Item</span>
         <div className="border-b-2 border-dashed pb-3 my-3">
-          <div className="flex justify-between">
-            <span className="text-gray-500">Grey Chair</span>
-            <span>$19</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-500">Tooly Tabel</span>
-            <span>$80</span>
-          </div>
+          <ul>
+            {[1, 2, 3, 4, 5].map((i) => (
+              <div
+                key={i}
+                className="flex justify-between first:bg-slate-400 last:bg-slate-400"
+              >
+                <span className="text-gray-500">Grey Chair</span>
+                <span>$19</span>
+              </div>
+            ))}
+          </ul>
+          <ul>
+            {["a", "b", "c", ""].map((item, index) => (
+
+              // empty : 빈 배열에 css 주기
+              <li key={index} className="bg-red-400 py-3 border empty:bg-slate-400 empty:hidden">{item}</li>
+            ))}
+          </ul>
         </div>
         <div className="flex justify-between mb-5">
           <span>Total</span>
