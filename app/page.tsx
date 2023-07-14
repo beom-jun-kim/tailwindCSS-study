@@ -27,9 +27,13 @@ export default function Home() {
           </ul>
           <ul>
             {["a", "b", "c", ""].map((item, index) => (
-
               // empty : 빈 배열에 css 주기
-              <li key={index} className="bg-red-400 py-3 border empty:bg-slate-400 empty:hidden">{item}</li>
+              <li
+                key={index}
+                className="bg-red-400 py-3 border empty:bg-slate-400 empty:hidden"
+              >
+                {item}
+              </li>
             ))}
           </ul>
         </div>
@@ -41,7 +45,9 @@ export default function Home() {
           checkout
         </div>
       </div>
-      <div className="bg-slate-50 px-8 py-6 rounded-xl shadow-xl">
+
+      {/* group */}
+      <div className="bg-slate-50 px-8 py-6 rounded-xl shadow-xl group">
         <div>
           <div className="flex justify-between mb-3">
             <div>⬅️</div>
@@ -72,7 +78,9 @@ export default function Home() {
             </div>
             <div className="flex justify-between items-center mt-6">
               <span className="text-2xl font-medium">$450</span>
-              <button className="bg-blue-500 text-white px-10 py-3 rounded-lg">
+
+              {/* group-hover */}
+              <button className="bg-blue-500 text-white px-10 py-3 rounded-lg group-hover:bg-slate-400 transition-colors">
                 Add to cart
               </button>
             </div>
