@@ -27,9 +27,13 @@ export default function Home() {
           </ul>
           <ul>
             {["a", "b", "c", ""].map((item, index) => (
-
               // empty : 빈 배열에 css 주기
-              <li key={index} className="bg-red-400 py-3 border empty:bg-slate-400 empty:hidden">{item}</li>
+              <li
+                key={index}
+                className="bg-red-400 py-3 border empty:bg-slate-400 empty:hidden"
+              >
+                {item}
+              </li>
             ))}
           </ul>
         </div>
@@ -41,7 +45,9 @@ export default function Home() {
           checkout
         </div>
       </div>
-      <div className="bg-slate-50 px-8 py-6 rounded-xl shadow-xl">
+
+      {/* group */}
+      <div className="bg-slate-50 px-8 py-6 rounded-xl shadow-xl group">
         <div>
           <div className="flex justify-between mb-3">
             <div>⬅️</div>
@@ -72,15 +78,45 @@ export default function Home() {
             </div>
             <div className="flex justify-between items-center mt-6">
               <span className="text-2xl font-medium">$450</span>
-              <button className="bg-blue-500 text-white px-10 py-3 rounded-lg">
+
+              {/* group-hover */}
+              <button className="bg-blue-500 text-white px-10 py-3 rounded-lg group-hover:bg-slate-400 transition-colors">
                 Add to cart
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-slate-50 p-10 rounded-xl shadow-xl"></div>
-      <div className="bg-slate-50 p-10 rounded-xl shadow-xl"></div>
+      <form className="flex flex-col bg-slate-300 focus-within:bg-blue-200 p-5">
+        <input
+          type="text"
+          required
+          placeholder="username"
+          className="p-1 placeholder-shown:bg-green-700"
+        />
+        <input
+          type="password"
+          required
+          placeholder="password"
+          className="my-2 p-1 placeholder-shown:bg-green-700"
+        />
+        <input type="submit" className="bg-white cursor-pointer p-1" />
+      </form>
+      <form className="flex flex-col space-y-2  p-5 ">
+        <input
+          type="text"
+          required
+          placeholder="Username"
+          className="border p-1 peer border-gray-400 rounded-md "
+        />
+        <span className="hidden peer-invalid:block peer-invalid:text-red-500">
+          This input is invalid
+        </span>
+        <span className="hidden peer-valid:block peer-valid:text-blue-500">
+          Awesome username
+        </span>
+        <input type="submit" value="Login" className="bg-white" />
+      </form>
     </div>
   );
 }
