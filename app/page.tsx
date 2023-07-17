@@ -46,7 +46,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* group */}
       <div className="bg-slate-50 px-8 py-6 rounded-xl shadow-xl group">
         <div>
           <div className="flex justify-between mb-3">
