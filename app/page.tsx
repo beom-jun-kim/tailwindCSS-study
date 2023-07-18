@@ -1,5 +1,3 @@
-import { link } from "fs";
-import Image from "next/image";
 import tw from "tailwind-styled-components";
 
 const Button = tw.button`
