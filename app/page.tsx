@@ -114,6 +114,15 @@ export default function Home() {
         </span>
         <input type="submit" value="Login" className="bg-white" />
       </form>
+
+      {/* detail : 열림 상태일 때만 내부 정보를 보여주는 정보 공개 위젯 생성 */}
+      {/* summary : 이 요소를 통해 제공 */}
+      <details>
+        <summary>김범준</summary>
+        <span>바보</span>
+      </details>
+      <input type="file" className="file:border-0 file:rounded-sm file:bg-red-500" />
+      <p className="first-letter:text-5xl first-letter:hover:text-red-600">김범준 김범준 얼미넝리나</p>
     </div>
   );
 }
