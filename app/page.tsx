@@ -8,32 +8,16 @@ const Button = tw.button`
 
 export default function Home() {
   return (
-    <div className="bg-slate-400 py-10 px-5 grid gap-5">
-      <div className="bg-slate-50 p-10 rounded-xl shadow-xl">
+
+    // place-content-center : 컨텐츠의 크기로 중앙 배치
+    // portrait 및 landscape 수정자를 사용하여 뷰포트가 특정 방향에 있을 때 조건부로 스타일을 추가
+    //div class="portrait:hidden" , div class="landscape:hidden"
+    <div className="xl:place-content-center dark bg-slate-400 py-10 px-5 grid gap-5 lg:grid-cols-2 xl:grid-cols-3 text-black">
+      <div className="bg-slate-50 p-10 sm:bg-red-500 md:bg-teal-500 lg:bg-blue-500 xl:bg-yellow-400 2xl:bg-green-800 rounded-xl shadow-xl">
         <span className="font-semibold text-lg">Select Item</span>
-        <div className="border-b-2 border-dashed pb-3 my-3">
-          <ul>
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div
-                key={i}
-                className="flex justify-between first:bg-slate-400 last:bg-slate-400"
-              >
-                <span className="text-gray-500">Grey Chair</span>
-                <span>$19</span>
-              </div>
-            ))}
-          </ul>
-          <ul>
-            {["a", "b", "c", ""].map((item, index) => (
-              // empty : 빈 배열에 css 주기
-              <li
-                key={index}
-                className="bg-red-400 py-3 border empty:bg-slate-400 empty:hidden"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
+        <div className="border-b-2 border-dashed pb-3 my-3 flex justify-between">
+          <span className="text-gray-500">Grey Chair</span>
+          <span>$19</span>
         </div>
         <div className="flex justify-between mb-5">
           <span>Total</span>
@@ -43,8 +27,7 @@ export default function Home() {
           checkout
         </div>
       </div>
-
-      <div className="bg-slate-50 px-8 py-6 rounded-xl shadow-xl group">
+      <div className="dark:bg-red-600 bg-slate-50 px-8 py-6 rounded-xl shadow-xl group">
         <div>
           <div className="flex justify-between mb-3">
             <div>⬅️</div>
@@ -84,45 +67,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <form className="flex flex-col bg-slate-300 focus-within:bg-blue-200 p-5">
-        <input
-          type="text"
-          required
-          placeholder="username"
-          className="p-1 placeholder-shown:bg-green-700"
-        />
-        <input
-          type="password"
-          required
-          placeholder="password"
-          className="my-2 p-1 placeholder-shown:bg-green-700"
-        />
-        <input type="submit" className="bg-white cursor-pointer p-1" />
-      </form>
-      <form className="flex flex-col space-y-2  p-5 ">
-        <input
-          type="text"
-          required
-          placeholder="Username"
-          className="border p-1 peer border-gray-400 rounded-md "
-        />
-        <span className="hidden peer-invalid:block peer-invalid:text-red-500">
-          This input is invalid
-        </span>
-        <span className="hidden peer-valid:block peer-valid:text-blue-500">
-          Awesome username
-        </span>
-        <input type="submit" value="Login" className="bg-white" />
-      </form>
-
-      {/* detail : 열림 상태일 때만 내부 정보를 보여주는 정보 공개 위젯 생성 */}
-      {/* summary : 이 요소를 통해 제공 */}
-      <details>
-        <summary>김범준</summary>
-        <span>바보</span>
-      </details>
-      <input type="file" className="file:border-0 file:rounded-sm file:bg-red-500" />
-      <p className="first-letter:text-5xl first-letter:hover:text-red-600">김범준 김범준 얼미넝리나</p>
+      
     </div>
   );
 }

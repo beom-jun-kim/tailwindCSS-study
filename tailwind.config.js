@@ -17,5 +17,9 @@ module.exports = {
       },
     },
   },
+
+  // media : 다크모드 설정은 환경설정을 따라간다
+  // class : 수동 활성화 (react , js로)
+  darkMode:"class",
   plugins: [],
 }
