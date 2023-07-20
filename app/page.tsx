@@ -27,7 +27,47 @@ export default function Home() {
           checkout
         </div>
       </div>
-      <div className="dark:bg-red-600 bg-slate-50 px-8 py-6 rounded-xl shadow-xl group">
+      <div className="dark:bg-black bg-slate-50 px-8 py-6 rounded-xl shadow-xl group">
+        <div>
+          <div className="flex justify-between mb-3">
+            <div>⬅️</div>
+            <div className="space-x-3">
+              <span>4.9</span>
+              <span className="shadow-lg p-1 rounded-md">💖</span>
+            </div>
+          </div>
+          <div>
+            <img src="https://i.ibb.co/5963kz8/chair.jpg" alt="의자" />
+          </div>
+          <div className="mt-3">
+            <span className="block text-lg font-bold">Swoon Lounge</span>
+            <span className="text-sm text-slate-500">Chair</span>
+            <div>
+              <div className="flex justify-between items-center">
+                <div className="space-x-3">
+                  <button className="w-5 h-5 rounded-full bg-yellow-500 focus:ring-2 ring-offset-2 ring-yellow-500 transition" />
+                  <button className="w-5 h-5 rounded-full bg-indigo-500 focus:ring-2 ring-offset-2 ring-indigo-500 transition" />
+                  <button className="w-5 h-5 rounded-full bg-teal-500 focus:ring-2 ring-offset-2 ring-teal-500 transition" />
+                </div>
+                <div className="space-x-3">
+                  <Button>-</Button>
+                  <span>1</span>
+                  <Button>+</Button>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-between items-center mt-6">
+              <span className="text-2xl font-medium">$450</span>
+
+              {/* group-hover */}
+              <button className="bg-blue-500 text-white px-10 py-3 rounded-lg group-hover:bg-slate-400 transition-colors">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="dark:bg-black bg-slate-50 px-8 py-6 rounded-xl shadow-xl group">
         <div>
           <div className="flex justify-between mb-3">
             <div>⬅️</div>
