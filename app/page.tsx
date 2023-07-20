@@ -12,8 +12,12 @@ export default function Home() {
     // place-content-center : 컨텐츠의 크기로 중앙 배치
     // portrait 및 landscape 수정자를 사용하여 뷰포트가 특정 방향에 있을 때 조건부로 스타일을 추가
     //div class="portrait:hidden" , div class="landscape:hidden"
+    // dark mode : 적용하고자 하는 부모 요소에 넣는다
     <div className="xl:place-content-center dark bg-slate-400 py-10 px-5 grid gap-5 lg:grid-cols-2 xl:grid-cols-3 text-black">
       <div className="bg-slate-50 p-10 sm:bg-red-500 md:bg-teal-500 lg:bg-blue-500 xl:bg-yellow-400 2xl:bg-green-800 rounded-xl shadow-xl">
+
+        {/* tailwind 제한에서 벗어나기 (just in time compiler) : es) text-[10px] */}
+        {/* bg-[url('/img.svg')] */}
         <span className="font-semibold text-lg">Select Item</span>
         <div className="border-b-2 border-dashed pb-3 my-3 flex justify-between">
           <span className="text-gray-500">Grey Chair</span>
